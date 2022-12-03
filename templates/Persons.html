@@ -1,0 +1,10 @@
+
+	<h1>
+		Деятели
+	</h1>
+	{% for person in persons_list %}
+			<a href="/persons/{{person["id"]}}">
+				{{ person["name"] }}
+			</a><br>
+
+	{% endfor %}

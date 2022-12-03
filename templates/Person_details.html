@@ -1,0 +1,13 @@
+
+	<h1>
+		{{person["name"]}}
+	</h1>
+	<P>Страны: {{Countries}}</P>
+    {% if person["date_of_death"] != None %}
+    <P>{{person["date_of_birth"]}} - {{person["date_of_death"]}}</P>
+    {% else %}
+    <P>род. {{person["date_of_birth"]}}</P>
+    {% endif %}
+    {% for type in works %}
+    <P>{{type["type"]}}: {{type["titles"]}}</P>
+    {% endfor %}

@@ -1,0 +1,14 @@
+
+	<h1>
+		Произведения
+	</h1>
+	{% for type in types %}
+	<P>{{type["type_name"]}}:</P>
+	{% for work in works_list %}
+	{% if type["type_name"] == work["type_name"] %}
+			<a href="/works/{{work["id"]}}">
+				{{ work["title"] }}
+			</a><br>
+	{% endif %}
+	{% endfor %}
+	{% endfor %}
